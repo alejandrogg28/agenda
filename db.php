@@ -38,8 +38,8 @@ function listarContactos($conexionBD){
     return mysqli_fetch_all($result,MYSQLI_ASSOC); //pedir que devuelva todas las tuplas de un array asociativo
 }
 
-function insertarContacto($conexionBD,$nombre,$apellidos,$tel_fijo,$correo){
-    $sentenzaSQL = "INSERT INTO contacto (nombre, apellidos, tel_fijo, correo) VALUES ('$nombre', '$apellidos', '$tel_fijo', '$correo');";
+function insertarContacto($conexionBD,$nombre,$apellidos,$tel_fijo,$correo,$tel_movil){
+    $sentenzaSQL = "INSERT INTO contacto (nombre, apellidos, tel_fijo, correo, tel_movil) VALUES ('$nombre', '$apellidos', '$tel_fijo', '$correo', '$tel_movil');";
     $result = mysqli_query($conexionBD, $sentenzaSQL);
 
     if (!$result) {

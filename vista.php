@@ -48,7 +48,7 @@ function mostrarContactos($contactos){
 }
 
 
-function pintarFormularioContacto($action,$method,$nombre,$apellidos,$tel_fijo,$correo){
+function pintarFormularioContacto($action,$method,$nombre,$apellidos,$tel_fijo,$correo,$tel_movil){
     ?>
 
     <form action = "<?php echo $action;?>" method="<?php echo $method?>">
@@ -60,6 +60,9 @@ function pintarFormularioContacto($action,$method,$nombre,$apellidos,$tel_fijo,$
         <input type="text" name="tel_fijo" value="<?php echo $tel_fijo?>" required><br>
         <label for="correo">Correo:</label>
         <input type="email" name="correo" value="<?php echo $correo?>" required><br>
+        <label for="tel_movil">Teléfono Móvil:</label>
+        <input type="text" name="tel_movil" value="<?php echo $tel_movil?>" required><br>
+
 
         <input type="submit" value="Enviar">
     </form>

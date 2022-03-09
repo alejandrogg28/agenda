@@ -53,6 +53,7 @@ function validarFormularioLogin($u,$p){
     if(strlen($p)<4){
         array_push($errs, "El campo pasword tiene que tener al menos dos caracteres");
     }
+    
 
     return $errs;
 }
